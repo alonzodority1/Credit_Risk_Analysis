@@ -12,52 +12,64 @@ Random Over Sampler
 ### Results
 ![Alt text](ROS.PNG)
 
-2 Variables provide non-random variance: Vehicle_length & Ground_clearance
+* Balanced-Accuracy score is not very strong at .64
+* Prescion on High risk was very low at .01 while extremely high, 1.0, for low risk 
+* Sensitivity on High risk was decent at .71 high lower for low risk
 
-The slope is not zero as the co-effiencts that are statistically significant are greater than 0
 
-The model predicts the mpg faily well with an adjusted R sqaured of 68 and a very small P value
+## SMOTE
+Synthetic Minority Over-sampling Technique
 
-## Summary Statistics on Suspension Coils
+### Results
+![Alt text](SMOTE.PNG)
 
-![Alt text](Total_Summary.PNG)
+* Balanced-Accuracy score is not very strong at .65
+* Prescion on High risk was very low at .01 while extremely high, 1.0, for low risk 
+* Sensitivity on High risk was at .60 and .71 for Low risk
 
-![Alt text](Lot_Summary.PNG)
 
-Cummulatively the suspension coils meet the deisgn specification of a sub 100 PSI variance however mesuring the lots individually we see that lot 3 does not meet the specification with a variance of 220.
+## Cluster Centroids
 
-## T-Tests on Suspension Coils
+### Results
+![Alt text](CC.PNG)
 
-![Alt text](1500_T-test.PNG)
+* Balanced-Accuracy score is not very strong at .54
+* Prescion on High risk was very low at .01 while extremely high, 1.0, for low risk 
+* Sensitivity on High risk was at .67 and .42 for Low risk
 
-With the very small p-value the sample mean is not significantly different from the population mean of 1500
 
-![Alt text](Lot_1_T-Test.PNG)
+## SMOTE_ENN
+SMOTE and Edited Nearest Neighbors
 
-With the very small p-value the sample mean is not significantly different from the Lot 1 mean
+### Results
+![Alt text](Smote_enn.PNG)
 
-![Alt text](Lot_2_T-Test.PNG)
+* Balanced-Accuracy score is not very strong at .64
+* Prescion on High risk was very low at .01 while extremely high, 1.0, for low risk 
+* Sensitivity on High risk was at .72 and .57 for Low risk
 
-With the very small p-value the sample mean is not significantly different from the Lot 2 mean
 
-![Alt text](Lot_3_T-Test.PNG)
+## Balanced RandomForest Classifier
 
-With the very small p-value the sample mean is not significantly different from the Lot 3 mean
+### Results
+![Alt text](BFR.PNG)
 
-## Study Design: MechaCar vs Competition
+* Balanced-Accuracy score is decent at .77
+* Prescion on High risk was very low at .03 while extremely high, 1.0, for low risk 
+* Sensitivity on High risk was at .66 and .88 for Low risk
 
-To compare the MechaCar with the competition there are 3 key metrics to compare per class:
 
-Cost
-Fuel Efficency (both city & highway)
-Safety Rating
-Trunk Space
+## Easy Ensemble AdaBoost Classifier
 
-The anaylsis would test cost per manuifacturer as a funcition of: MPG (city & highway), Safty rating  and trunk space
+### Results
+![Alt text](EEC.PNG)
 
-Null Hypothesis: The cost of a car is not related to MPG, Safety rating or Trunk Space
-ALternate Hypothesis: The cost of a car is dependat on MPG, Safety Rating and Trunk Space
+* Balanced-Accuracy score is strong at .93
+* Prescion on High risk was very low at .09 while extremely high, 1.0, for low risk 
+* Sensitivity on High risk was at .92 and .94 for Low risk
+* with an extremely low F1 score (.06) for High risk this model isnt very good at predicting those profiles.
 
-I would use a multiple linear regression to determine the relationships per manufacturer as there are multiple determinate variables
+## Summary
 
-We would need numnerical data show the cost in $, Fuel Effcency in MPG, Safety Rating 1-5 and Trunck space in cubic inches. 
+The clear winner in these modeling comparisions is the Easy Ensemble AdaBoost Classifier with a balanced accuracy of .93 and High risk recall of .92. As it is most important for lenders to identify high risk borrowers this high recall minimizes the potential high risk borrowers mistakenly classified as low risk.    
+
