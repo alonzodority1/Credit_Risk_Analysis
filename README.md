@@ -14,7 +14,7 @@ Random Over Sampler
 
 * Balanced-Accuracy score is not very strong at .64
 * Prescion on High risk was very low at .01 while extremely high, 1.0, for low risk 
-* Sensitivity on High risk was decent at .71 high lower for low risk
+* Sensitivity on High risk was decent at .71  and .58 for low risk
 
 
 ## SMOTE
