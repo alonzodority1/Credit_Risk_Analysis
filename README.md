@@ -10,7 +10,7 @@
 Random Over Sampler
 
 ### Results
-![Alt text](MechaCarChallenge.PNG)
+![Alt text](ROS.PNG)
 
 2 Variables provide non-random variance: Vehicle_length & Ground_clearance
 
