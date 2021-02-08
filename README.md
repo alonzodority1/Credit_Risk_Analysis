@@ -52,7 +52,7 @@ SMOTE and Edited Nearest Neighbors
 ## Balanced RandomForest Classifier
 
 ### Results
-![Alt text](BFR.PNG)
+![Alt text](BRF.PNG)
 
 * Balanced-Accuracy score is decent at .77
 * Prescion on High risk was very low at .03 while extremely high, 1.0, for low risk 
